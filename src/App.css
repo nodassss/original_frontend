@@ -1,0 +1,202 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+body{
+  background: rgb(211,247,245); /* 色とグラデーション */
+background: linear-gradient(90deg, rgba(211,247,245,1) 100%, rgba(154,207,50,1) 100%);
+  overflow-y: hidden; /* 100vhによってスクロールできないようにする */
+}
+h1{
+  text-align: center;
+}
+
+.formContainer{ /* formを中央に持ってきてる */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center; /* たてに対して中央に */
+  justify-content: center;/* 横に対して中央に */
+}
+.formContainer form{
+  background-color: rgb(251, 248, 248);
+  width: 100%;
+  max-width: 450px;/* 画面の幅が変わってもこれより大きくしない */
+  padding: 30px;/* 内側の余白 */
+  border-radius: 10px;/* 角に丸みを */
+  border: 1px solid #dfdfdf;
+  box-shadow: 5px 5px 20px -8px #777777;
+  border-radius: 11px;
+}
+.uiForm{  /* formFieldを大きく全部囲ってる */
+  display: flex;/* 全部横並びになる */
+  flex-direction: column;/* それが縦並びになる */
+  align-items: center;/* そうするとセンターに揃えられる */
+  justify-content: space-evenly;/* 等間隔にして表示 */
+  height: 500px;
+}
+.formField{/* 1つ1つのinput要素を囲ってる　*/
+  display: flex;/* inputについてるlavelを横に並べ動くようにする　*/
+  flex-direction: column;/* labelの並ぶ方向をたてにする*/
+  width: 100%;/* inputの幅が親要素の100％　*/
+}
+.formField input{
+  border: 1px solid gray;
+  padding: 20px;/* inputエリアを大きくした　*/
+  border-radius: 4px;/* inputエリアに丸み　*/
+}
+.formField input:focus{/* ポインターを当てたときに枠色が変わらないように　*/
+  outline: none;
+}
+.formField label{/* labelタグ　*/
+  font-size: 17px;/* label文字のサイズ　*/
+  font-weight: 600;/* 太文字*/
+  margin-bottom: 3px;/* input要素との間少しあける*/
+}
+
+.uiFormBtn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 20px;
+}
+button{
+  background-color: #8f8c8c;
+  width: 50%;
+  max-width: 450px;
+  margin-top: 10px;/* 上にある要素との間*/
+  border: none;/* いい感じになる*/
+  border-radius: 5px;
+  padding: 10px 30px;/* ボタンにある文字との余白上下10横幅30*/
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;/* ホバーの色チェンジをフワッと*/
+}
+button:hover{
+  background-color: #807f7f;/* ボタンにホバーした時色変わる*/
+}
+
+.errorMsg{
+  color: red;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.formBox{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formBox form{
+  background-color: rgb(251, 248, 248);
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #dfdfdf;
+  box-shadow: 5px 5px 20px -8px #777777;
+  border-radius: 11px;
+}
+.formA{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.Image{
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+}
+
+.formimage{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.formimage input{
+  border-radius: 4px;
+}
+.formimage label{
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.formA input{
+  border: 1px solid gray;
+  padding: 20px;
+  border-radius: 4px;
+}
+.formA input:focus{
+  outline: none;
+}
+.formA label{
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.formABtn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 50px;
+}
+
+.listBlock{
+  display: flex;
+	flex-wrap: wrap;
+  gap: 1px;
+
+}
+
+.listButton{
+  background-color: #8f8c8c;
+  width: 50px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
